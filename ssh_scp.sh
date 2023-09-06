@@ -1,6 +1,9 @@
 #!/bin/bash
 ##this script will only work if package SSHPass is downloaded. 
+#for this to work. You would need to go into the config file to ensure that it works and that password is required
+#additionally, I have to  be mindful about the public key  as well
 #creating a page that allows the users to select SSH or SCP
+
 echo '1 - ssh'
 echo '2 - scp'
 echo 'Select an option to continue'
@@ -29,7 +32,7 @@ then
         echo -e '2 - remote \U2192 local'
         echo 'Please choose an option'
         read option
-        
+        #put 2 option here for each different source and destination
         if [[ $option -eq 1 ]]
         then 
                 echo 'Please enter source file location and file name'
